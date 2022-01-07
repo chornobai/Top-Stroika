@@ -1,0 +1,44 @@
+.intro {
+  background: white url("../../img/bg/bg-main.png") no-repeat center;
+  background-size: cover;
+  min-height: 515px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px
+}
+
+.intro h2 {
+  @include reset-block;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin-bottom: 50px;
+  color:black;
+
+
+}
+
+.intro-link {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  background: #f8cc32;
+  padding: 35px 8%;
+  // border: 2px solid white;
+  // outline: 1px solid black;
+
+  &:hover {
+    transform: scale(0.9);
+    transition: 0.3s;
+  }
+  &:focus {
+    transform: scale(0.9);
+    transition: 0.3s;
+  }
+  &:active {
+    transform: scale(0.9);
+    transition: 0.3s;
+  }
+}
