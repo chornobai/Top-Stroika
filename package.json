@@ -2,7 +2,6 @@
   "name": "start",
   "private": true,
   "description": "Template for new project! If smth goes wrong just pray to God",
-  "type": "commonjs",
   "devDependencies": {
     "@babel/core": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
@@ -55,6 +54,6 @@
     "source/sass/**/*.scss"
   ],
   "engines": {
-    "node": "16.13.1"
+    "node": "14.18.2"
   }
 }
