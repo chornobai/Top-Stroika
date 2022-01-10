@@ -28,4 +28,16 @@ const slider = new Swiper('.swiper', {
     prevSlideMessage: 'Previous slide',
     nextSlideMessage: 'Next slide',
   },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+    },
+    767: {
+      slidesPerView:2,
+    },
+    1024: {
+      slidesPerView:4,
+    },
+  }
 })
