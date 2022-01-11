@@ -146,8 +146,8 @@ exports.scripts = scripts;
 //WebP
 
 const createWebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
-    .pipe(webp({ quality: 30}))
+  return gulp.src("build/img/**/*.{jpg,png}")
+    .pipe(webp({ quality: 5}))
     .pipe(gulp.dest("build/img"))
 }
 
