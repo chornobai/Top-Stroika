@@ -81,16 +81,16 @@ const html = () => {
 
 exports.html = html;
 
-//Images
+//Images Optimization
 
 const optimizeImages = () => {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
-      imagemin.mozjpeg({ progressive: true }),
-      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.mozjpeg({quality: 50, progressive: true}),
+      imagemin.optipng({ optimizationLevel: 5 }),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("build/img/"))
 }
 exports.optimizeImages = optimizeImages;
 
@@ -147,7 +147,7 @@ exports.scripts = scripts;
 
 const createWebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
-    .pipe(webp({ quality: 80 }))
+    .pipe(webp({ quality: 70}))
     .pipe(gulp.dest("source/img"))
 }
 
