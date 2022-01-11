@@ -1,5 +1,5 @@
 .intro {
-  background: white url("../img/bg/bg-main.png") no-repeat center;
+  background: white url("../img/bg/bg-main.jpeg") no-repeat center;
   background-size: cover;
   min-height: 515px;
   display: flex;
@@ -9,7 +9,7 @@
   margin-bottom: 80px;
 
   @media (min-resolution: 2dppx) {
-   background: white url("../img/bg/bg-main@2x.png") no-repeat center;
+   background: white url("../img/bg/bg-main@2x.jpeg") no-repeat center;
   background-size: cover;
   }
 }
