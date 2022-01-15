@@ -24,7 +24,12 @@
   color:black;
   text-align: center;
 
-
+  background-color: rgba($color: white, $alpha: 0.7);
+    padding:70px 60px;
+    outline: thick double  white;
+    outline-width: 10px;
+    border-left: none;
+    border-right: none;
 }
 
 .intro-link {
@@ -49,4 +54,40 @@
     transition: 0.3s;
   }
 }
+@media (max-width: $mobile-width) {
+  .intro{
+    background:  url("../img/bg/bg-main.jpg") no-repeat;
+  background-size: cover;
+background-blend-mode: saturation;
 
+  @media (min-resolution: 2dppx) {
+    background:  url("../img/bg/bg-main@2x.jpg") no-repeat;
+   background-size: cover;
+
+   }
+  }
+  .intro h2 {
+    @include reset-block;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0.01em;
+    margin-bottom: 50px;
+    color:black;
+    text-align: center;
+
+    background-color: rgba($color: white, $alpha: 0.7);
+      padding:40px 50px;
+      outline: thick double  white;
+      outline-width: 10px;
+      border-left: none;
+      border-right: none;
+  }
+
+
+  .intro-link{
+    font-size: 26px;
+    padding: 28px 8%;
+    border:1px solid black;
+  }
+  }
