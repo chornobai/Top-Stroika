@@ -1,3 +1,4 @@
+import Swiper from './vendor/swiper-bundle.min.js';
 
 const slider = new Swiper('.swiper', {
   direction: 'horizontal',

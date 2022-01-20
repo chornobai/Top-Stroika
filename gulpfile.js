@@ -173,6 +173,7 @@ const copy = (done) => {
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/**/*.{jpg,png,svg}",
+    "source/img/**/*.{jpg,png,svg}",
   ], {
     base: "source"
   })
@@ -181,6 +182,25 @@ const copy = (done) => {
 }
 
 exports.copy = copy;
+
+//Copy vendor
+
+const copyVendor = (done) => {
+  gulp.src(
+
+    "source/js/vendor/swiper-bundle.min.js",
+  {
+    base: "source"
+  })
+  .pipe(sourcemap.init())
+  .pipe(rename("vendor.js"))
+  .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/js"))
+  done();
+}
+
+exports.copyVendor = copyVendor;
+
 
 //Clean
 
@@ -196,6 +216,7 @@ const build = gulp.series(
   clean,
   copy,
   optimizeImages,
+  copyVendor,
   gulp.parallel(
     styles,
     html,
@@ -212,6 +233,7 @@ exports.default = gulp.series(
   clean,
   copy,
   copyImages,
+  copyVendor,
   gulp.parallel(
     styles,
     html,

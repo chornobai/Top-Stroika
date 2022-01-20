@@ -67,17 +67,17 @@ flex-wrap: wrap;
   display:flex;
 }
 
-.service-list--active {
+.service--active .service-list{
   display: flex;
 
 }
-
-.service-block--active h3{
+.service--active h3{
   background:  #f8cc32;
 &:after{
   background: url('../img/icon/minus.svg');
 }
 }
+
 
 @media (max-width: $mobile-width) {
   .service{
